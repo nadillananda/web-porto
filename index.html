@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nadilla</title>
+    <link rel="icon" href="img/logoo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="max-width">
+            <ul class="menu">
+                <li><a href="#home" class="menu-btn">//home</a></li>
+                <li><a href="#about" class="menu-btn">//about</a></li>
+                <li><a href="#services" class="menu-btn">//services</a></li>
+                <li><a href="#skills" class="menu-btn">//experience</a></li>
+                <li><a href="#contact" class="menu-btn">//contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home -->
+    <section class="home" id="home">
+        <div class="max-width">
+            <div class="home-content">
+
+                <div class="text-1">hi, <span>nadilla</span>'s here</div>
+                <div class="text-2">i strive to look things that can broaden my perspective.</div>
+                <div class="text-3">i'm a web developer based in Indonesia. i have great interest 
+                    in software and web development, machine learning, ui/ux, artificial intelegence and <span class="typing"></span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <div class="max-width">
+            <h2 class="title">/ about me</h2>
+            <div class="about-content">
+                <div class="column left">
+                    <img src="img/about.jpg" alt="">
+                </div>
+                <div class="column right">
+                    <div class="text">what i provide <span class="typing-2"></span></div>
+                    <div class="text-1"> i am currently a freelance Website Developer and i am undertaking a study in Information Technology
+                        of Computer Science at Pasundan University.</div>
+                    <div class="text-2">here are some technologies i have been working with:</div>
+                    <ul class="technologies-list">
+                        <li><img src="img/pointer.png" alt=""> PHP, Laravel</li>
+                        <li><img src="img/pointer.png" alt=""> HTML & CSS</li>
+                        <li><img src="img/pointer.png" alt=""> JavaScript</li>
+                        <li><img src="img/pointer.png" alt=""> MySQL</li>
+                        <li><img src="img/pointer.png" alt=""> Figma</li>
+                        <li><img src="img/pointer.png" alt=""> Adobe Photoshop</li>
+                    </ul>
+                        <!--  and do web app projects. i'm interest in following the developments of science 
+                        and technology, art, and space. nanti dulu, agak aneh kalau masukkin ini -->                    
+                        <a href="CV-NADILLA.pdf" target="_blank">preview cv</a>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- services -->
+    <section class="services" id="services">
+        <div class="max-width">
+            <h2 class="title">/ services</h2>
+            <div class="serv-content">
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-paint-brush"></i>
+                        <div class="text">design, development</div>
+                        <p>websites, apps, and designes</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <i class="far fa-keyboard"></i>
+                        <div class="text">courses, certification</div>
+                        <p>courses i have done</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-gamepad"></i>
+                        <div class="text">photos, videography</div>
+                        <p> i took photos & videos sometimes</p>
+                    </div>
+                </div>
+               </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- experience -->
+    <section class="skills" id="skills">
+        <div class="max-width">
+          <h2 class="title">/ experience</h2>
+          <div class="skills-content">
+            <div class="column left">
+              <div class="text" onclick="showExperience('creative')">Creative Skills & Experiences:</div>
+              <div class="text-item text-1 active" onclick="showExperience('work')">Navigasi Coffee</div>
+              <div class="text-item text-2" onclick="showExperience('university')">Pasundan University</div>
+              <div class="text-item text-3" onclick="showExperience('corindo')">Octo Corindo</div>
+              <div class="text-item text-4" onclick="showExperience('smks')">SMKS Informatika Amanah Bangsa</div>
+            </div>
+            <div class="column right">
+              <div id="experience-container">
+                <!-- default visible content -->
+                <div id="work" class="experience-content active">
+                  <h3>Navigasi Coffee</h3>
+                  <p>Operated and maintained coffee equipment, mastered roasting and flavor profiles, managed high-volume orders with accuracy, multitasked across drink prep and cashier duties, handled customer concerns professionally, and ensured a clean, compliant workspace.</p>
+                </div>
+                <div id="university" class="experience-content">
+                  <h3>Pasundan University</h3>
+                  <p>Pursuing a Bachelor's in Computer Science (currently on a break), focusing on Information Technology and Systems Analysis. Engaged in multiple projects related to software development and database management. Led event planning as Head of Events for Batch Celebration (2021) and Class Gathering (2021), served as Secretary of the Discipline Committee for Defragment (2022-2023), contributed to Choir & Music in Lingkung Seni Mahasiswa (2022-2023) and Media Design for EFEST Concert (2023).</p>
+                </div>
+                <div id="corindo" class="experience-content">
+                  <h3>Octo Corindo</h3>
+                  <p>Completed an internship at PT. Octo Corindo as an Office Administrator. Gained experience in interpersonal communication, managing office supplies, and organizing data using Excel.</p>
+                </div>
+                <div id="smks" class="experience-content">
+                  <h3>SMKS Informatika Amanah Bangsa</h3>
+                  <p>Graduated from SMKS Informatika Amanah Bangsa with a specialization in Design and Multimedia. Developed a strong foundation in programming, networking, and IT support. Trained in MS Office and Internet Email (2018), served in the Student Council's Publication & PR Division (2018-2021), and led Roxe Esports as In-Game Leader (2018-2021).</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      </head>
+<body>
+
+    <!-- contact -->
+    <section class="contact" id="contact">
+        <div class="max-width">
+            <h2 class="title">/ contact me</h2>
+            <div class="contact-content">
+                <div class="column left">
+                    <div class="text">contact person</div>
+                    <p>get in touch with me, you can personally contact me on Whatsapp or Email and i am available at every hours!</p>
+                    <div class="icons">
+                        <div class="row">
+                            <i class="fas fa-user"></i>
+                            <div class="info">
+                                <div class="head">Name</div>
+                                <div class="sub-title">Nadilla Ananda</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="info">
+                                <div class="head">Located in</div>
+                                <div class="sub-title">Cikarang, Indonesia</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-envelope"></i>
+                            <div class="info">
+                                <div class="head">Email</div>
+                                <div class="sub-title">747nadillananda@gmail.com</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fab fa-instagram"></i>
+                            <div class="info">
+                                <div class="head">Whatsapp</div>
+                                <div class="sub-title">(+62) 821-1793-3082</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <span>built and designed by nadilla | all rights reserved ⓒ.</span>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
