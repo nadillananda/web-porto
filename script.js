@@ -44,38 +44,39 @@ $(document).ready(function () {
     loop: true,
   });
 
-  // experience
-  document.addEventListener("DOMContentLoaded", function () {
-    function showExperience(experience) {
-      // hide all experience descriptions
-      document.querySelectorAll(".experience-content").forEach((section) => {
-        section.classList.remove("active");
-      });
-
-      // remove 'active' class from all text items
-      document.querySelectorAll(".text-item").forEach((item) => {
-        item.classList.remove("active");
-      });
-
-      // show selected experience INI GABISA BISA WOI PUSING T____T
-      const selectedExperience = document.getElementById(experience);
-      if (selectedExperience) {
-        selectedExperience.classList.add("active");
-      }
-
-      const selectedTextItem = document.querySelector(`.text-item[data-experience="${experience}"]`);
-      if (selectedTextItem) {
-        selectedTextItem.classList.add("active");
+  // experience - make text clickable
+  // Handle clicks on text-item or experience-text
+  $(document).on("click", ".text-item, .experience-text", function(e) {
+    e.stopPropagation();
+    
+    // Get the text-item element (either clicked directly or parent)
+    const textItem = $(this).closest(".text-item").length > 0 
+      ? $(this).closest(".text-item")[0]
+      : this;
+    
+    if (textItem) {
+      const $textItem = $(textItem);
+      const experience = $textItem.data("experience");
+      const $experienceContent = $("#" + experience);
+      
+      if ($experienceContent.length > 0) {
+        // Check if this experience is already active
+        const isActive = $experienceContent.hasClass("active");
+        
+        if (isActive) {
+          // If clicking the active one, don't do anything (keep it visible)
+          return;
+        } else {
+          // Hide ALL experiences and remove active from all text-items
+          $(".experience-content").removeClass("active");
+          $(".text-item").removeClass("active");
+          
+          // Show only the clicked experience
+          $experienceContent.addClass("active");
+          $textItem.addClass("active");
+        }
       }
     }
-
-    document.querySelectorAll(".text-item").forEach((item) => {
-      item.addEventListener("click", function () {
-        showExperience(this.dataset.experience);
-      });
-    });
-
-    showExperience("work");
   });
 
   // owl carousel
