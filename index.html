@@ -34,7 +34,7 @@
 
                 <div class="text-1">hi, <span>nadilla</span>'s here</div>
                 <div class="text-2">i strive to look things that can broaden my perspective.</div>
-                <div class="text-3">i'm a web developer based in Indonesia. i have great interest 
+                <div class="text-3">i'm a developer based in Indonesia. i have great interest 
                     in software and web development, machine learning, ui/ux, artificial intelegence and <span class="typing"></span></div>
             </div>
         </div>
@@ -78,21 +78,21 @@
                 <div class="card">
                     <div class="box">
                         <i class="fas fa-paint-brush"></i>
-                        <div class="text">design, development</div>
-                        <p>websites, apps, and designes</p>
+                        <div class="text">multimedia design</div>
+                        <p>websites, apps, and other projects</p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="box">
                         <i class="far fa-keyboard"></i>
-                        <div class="text">courses, certification</div>
+                        <div class="text">certification</div>
                         <p>courses i have done</p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="box">
                         <i class="fas fa-gamepad"></i>
-                        <div class="text">photos, videography</div>
+                        <div class="text">all about graphic</div>
                         <p> i took photos & videos sometimes</p>
                     </div>
                 </div>
@@ -107,22 +107,37 @@
           <h2 class="title">/ experience</h2>
           <div class="skills-content">
             <div class="column left">
-              <div class="text" onclick="showExperience('creative')">Creative Skills & Experiences:</div>
-              <div class="text-item text-1 active" onclick="showExperience('work')">Navigasi Coffee</div>
-              <div class="text-item text-2" onclick="showExperience('university')">Pasundan University</div>
-              <div class="text-item text-3" onclick="showExperience('corindo')">Octo Corindo</div>
-              <div class="text-item text-4" onclick="showExperience('smks')">SMKS Informatika Amanah Bangsa</div>
+              <div class="text">Creative Skills & Experiences:</div>
+              <div class="text-item text-1 active" data-experience="asahi">
+                <span class="experience-text">Asahi Sukses Industri</span>
+              </div>
+              <div class="text-item text-2" data-experience="navigasi">
+                <span class="experience-text">Navigasi Coffee</span>
+              </div>
+              <div class="text-item text-3" data-experience="university">
+                <span class="experience-text">Pasundan University</span>
+              </div>
+              <div class="text-item text-4" data-experience="corindo">
+                <span class="experience-text">Octo Corindo</span>
+              </div>
+              <div class="text-item text-5" data-experience="smks">
+                <span class="experience-text">SMKS Informatika Amanah Bangsa</span>
+              </div>
             </div>
             <div class="column right">
               <div id="experience-container">
                 <!-- default visible content -->
-                <div id="work" class="experience-content active">
+                <div id="asahi" class="experience-content active">
+                  <h3>Asahi Sukses Industri</h3>
+                  <p>Build and Operate Cisco Catalyst Switches for the company's network infrastructure, ensuring reliable connectivity and efficient data transmission. Upgrade PC Server RAM, installed Windows Server 2020 and managed the network infrastructure.</p>
+                </div>
+                <div id="navigasi" class="experience-content">
                   <h3>Navigasi Coffee</h3>
                   <p>Operated and maintained coffee equipment, mastered roasting and flavor profiles, managed high-volume orders with accuracy, multitasked across drink prep and cashier duties, handled customer concerns professionally, and ensured a clean, compliant workspace.</p>
                 </div>
                 <div id="university" class="experience-content">
                   <h3>Pasundan University</h3>
-                  <p>Pursuing a Bachelor's in Computer Science (currently on a break), focusing on Information Technology and Systems Analysis. Engaged in multiple projects related to software development and database management. Led event planning as Head of Events for Batch Celebration (2021) and Class Gathering (2021), served as Secretary of the Discipline Committee for Defragment (2022-2023), contributed to Choir & Music in Lingkung Seni Mahasiswa (2022-2023) and Media Design for EFEST Concert (2023).</p>
+                  <p>Pursuing a Bachelor's in Computer Science (currently on a break). Engaged in multiple projects related to software development and database management. Led event planning as Head of Events for Batch Celebration (2021) and Class Gathering (2021), served as Secretary of the Discipline Committee for Defragment (2022-2023), contributed to Choir & Music in Lingkung Seni Mahasiswa (2022-2023) and Media Design for EFEST Concert (2023).</p>
                 </div>
                 <div id="corindo" class="experience-content">
                   <h3>Octo Corindo</h3>
@@ -137,8 +152,6 @@
           </div>
         </div>
       </section>
-      </head>
-<body>
 
     <!-- contact -->
     <section class="contact" id="contact">
@@ -178,7 +191,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
                 </div>
             </div>
         </div>
