@@ -38,18 +38,16 @@ $(document).ready(function () {
   });
 
   var typed = new Typed(".typing-2", {
-    strings: ["full-stack development", "website design", "video editing"],
-    typeSpeed: 100,
-    backSpeed: 60,
+    strings: ["full-stack", "multimedia design", "network infrastructure", " videography"],
+    typeSpeed: 120,
+    backSpeed: 100,
     loop: true,
   });
 
-  // experience - make text clickable
-  // Handle clicks on text-item or experience-text
+  // experience 
   $(document).on("click", ".text-item, .experience-text", function(e) {
     e.stopPropagation();
     
-    // Get the text-item element (either clicked directly or parent)
     const textItem = $(this).closest(".text-item").length > 0 
       ? $(this).closest(".text-item")[0]
       : this;
@@ -60,18 +58,14 @@ $(document).ready(function () {
       const $experienceContent = $("#" + experience);
       
       if ($experienceContent.length > 0) {
-        // Check if this experience is already active
         const isActive = $experienceContent.hasClass("active");
         
         if (isActive) {
-          // If clicking the active one, don't do anything (keep it visible)
           return;
         } else {
-          // Hide ALL experiences and remove active from all text-items
           $(".experience-content").removeClass("active");
           $(".text-item").removeClass("active");
           
-          // Show only the clicked experience
           $experienceContent.addClass("active");
           $textItem.addClass("active");
         }
