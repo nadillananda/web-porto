@@ -2,39 +2,8 @@
 
 import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
-
-interface JournalEntry {
-  id: number
-  title: string
-  excerpt: string
-}
-
-const journalEntries: JournalEntry[] = [
-  {
-    id: 1,
-    title: 'The Architecture of Thought',
-    excerpt:
-      'In the silence of midnight debugging sessions, I find clarity. Code becomes poetry when structure meets intention, when every function serves a purpose beyond its immediate task.',
-  },
-  {
-    id: 2,
-    title: 'Designing in the Margins',
-    excerpt:
-      'The most beautiful solutions often emerge from constraints. When limitations become creative catalysts, we discover possibilities that didn\'t exist in the realm of unlimited choice.',
-  },
-  {
-    id: 3,
-    title: 'The Rhythm of Iteration',
-    excerpt:
-      'Building software is a dance between planning and discovery. Each iteration reveals new insights, each refactor brings us closer to something that feels inevitable in hindsight.',
-  },
-  {
-    id: 4,
-    title: 'Code as Communication',
-    excerpt:
-      'Every variable name, every function structure, every comment is a message to future readers—including yourself. Write code that tells a story, that explains not just what, but why.',
-  },
-]
+import Link from 'next/link'
+import { journalArticles } from '@/app/journal/articles'
 
 export default function Journal() {
   const [isVisible, setIsVisible] = useState(false)
@@ -98,28 +67,29 @@ export default function Journal() {
 
           {/* Journal Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-            {journalEntries.map((entry, index) => (
-              <div
+            {journalArticles.map((entry, index) => (
+              <Link
                 key={entry.id}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-8 md:p-10 hover:bg-white/10 hover:border-white/20 transition-all duration-500"
+                href={`/journal/${entry.slug}`}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-8 md:p-10 hover:bg-white/10 hover:border-white/20 transition-all duration-500 block"
                 style={{
                   animationDelay: `${index * 150}ms`,
                 }}
               >
                 <div className="space-y-6">
-                  <h3 className="text-2xl md:text-3xl font-semibold text-white group-hover:text-white transition-colors duration-300">
-                    {entry.title}
-                  </h3>
-                  <p className="text-base md:text-lg font-light leading-relaxed text-gray-300">
-                    {entry.excerpt}
-                  </p>
-                  <a
-                    href="#"
-                    className="inline-flex items-center gap-2 text-sm md:text-base font-light text-gray-400 hover:text-white transition-colors duration-300 group/link"
-                  >
+                  <div className="space-y-3">
+                    <h3 className="text-2xl md:text-3xl font-semibold text-white group-hover:text-white transition-colors duration-300">
+                      {entry.title}
+                    </h3>
+                    <p className="text-base md:text-lg font-light leading-relaxed text-gray-300">
+                      {entry.excerpt}
+                    </p>
+                  </div>
+
+                  <div className="inline-flex items-center gap-2 text-sm md:text-base font-light text-gray-400 group-hover:text-white transition-colors duration-300">
                     Read more
                     <svg
-                      className="w-4 h-4 transition-transform duration-300 group-hover/link:translate-x-1"
+                      className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -131,9 +101,9 @@ export default function Journal() {
                         d="M17 8l4 4m0 0l-4 4m4-4H3"
                       />
                     </svg>
-                  </a>
+                  </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

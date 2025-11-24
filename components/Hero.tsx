@@ -1,10 +1,19 @@
 'use client'
 
+import Image from 'next/image'
+
 export default function Hero() {
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Gradient */}
       <div className="absolute inset-0 z-0">
+        <Image
+          src="/img/hero-page.png"
+          alt="Cinematic background"
+          fill
+          priority
+          className="object-cover"
+        />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70 z-10" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_black_100%)] z-10 opacity-60" />
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent via-black/50 to-black/80 z-10" />
@@ -25,7 +34,19 @@ export default function Hero() {
             i shape algorithms that pulse with intent, weaving designs that echo softly, and revealing experiences born between the dim glow of complexity and the spark of clarity.
             </p>
             <div className="pt-4 animate-fade-in-delay">
-              <button className="group flex items-center gap-3 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-base md:text-lg font-medium hover:bg-white/20 transition-all duration-300 hover:gap-4">
+              <button
+                onClick={() => {
+                  const journalSection = document.getElementById('journal')
+                  if (journalSection) {
+                    const offsetTop = journalSection.offsetTop - 100
+                    window.scrollTo({
+                      top: offsetTop,
+                      behavior: 'smooth',
+                    })
+                  }
+                }}
+                className="group flex items-center gap-3 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-base md:text-lg font-medium hover:bg-white/20 transition-all duration-300 hover:gap-4"
+              >
                 View My Work
                 <svg
                   className="w-5 h-5 transition-transform group-hover:translate-x-1"

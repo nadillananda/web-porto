@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
+import AboutVideo from './AboutVideo'
 
 export default function About() {
   const [isVisible, setIsVisible] = useState(false)
@@ -51,7 +52,7 @@ export default function About() {
       </div>
 
       {/* Content Container */}
-      <div className="relative z-10 max-w-4xl mx-auto px-8 md:px-16 w-full">
+      <div className="relative z-10 max-w-6xl mx-auto px-8 md:px-16 w-full">
         <div
           className={`space-y-12 transition-all duration-1000 ${
             isVisible
@@ -62,23 +63,29 @@ export default function About() {
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight text-white">
             / about me
           </h2>
-          <div className="space-y-6 max-w-3xl">
-            <p className="text-xl md:text-2xl lg:text-3xl font-light leading-relaxed text-gray-300">
-              In the quiet spaces between code and creation, I craft digital
-              experiences that breathe.
-            </p>
-            <p className="text-lg md:text-xl lg:text-2xl font-light leading-relaxed text-gray-400">
-              As an IT and software developer, I navigate the delicate balance
-              between technical precision and human intuition. Each line of code
-              is a thread in a larger tapestry—a bridge between abstract logic
-              and tangible impact.
-            </p>
-            <p className="text-lg md:text-xl lg:text-2xl font-light leading-relaxed text-gray-400">
-              I believe in building systems that not only function flawlessly
-              but also resonate with the people who use them. Where complexity
-              meets clarity, where algorithms meet artistry—that's where
-              meaningful work happens.
-            </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Video Section */}
+            <AboutVideo />
+
+            {/* Text Content */}
+            <div className="space-y-5">
+              <p className="text-base md:text-lg lg:text-xl font-light leading-relaxed text-gray-300">
+                In the quiet spaces between code and creation, I craft digital
+                experiences that breathe.
+              </p>
+              <p className="text-sm md:text-base lg:text-lg font-light leading-relaxed text-gray-400">
+                As an IT and software developer, I navigate the delicate balance
+                between technical precision and human intuition. Each line of code
+                is a thread in a larger tapestry—a bridge between abstract logic
+                and tangible impact.
+              </p>
+              <p className="text-sm md:text-base lg:text-lg font-light leading-relaxed text-gray-400">
+                I believe in building systems that not only function flawlessly
+                but also resonate with the people who use them. Where complexity
+                meets clarity, where algorithms meet artistry—that's where
+                meaningful work happens.
+              </p>
+            </div>
           </div>
         </div>
       </div>
