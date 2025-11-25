@@ -15,7 +15,7 @@ export const journalArticles: JournalArticle[] = [
   },
   {
     id: 2,
-    title: 'Designing in the Margins',
+    title: 'Designs',
     slug: 'designing-in-the-margins',
     excerpt:
       'The most beautiful solutions often emerge from constraints. When limitations become creative catalysts, we discover possibilities that didn\'t exist in the realm of unlimited choice.',
@@ -25,7 +25,7 @@ export const journalArticles: JournalArticle[] = [
     title: 'Outside of Design and Coding',
     slug: 'the-rhythm-of-iteration',
     excerpt:
-      'Building software is a dance between planning and discovery. Each iteration reveals new insights, each refactor brings us closer to something that feels inevitable in hindsight.',
+      'Outside of design and code, literation and photography becomes breathing. Each iteration reveals new insights, each refactor brings us closer to something that feels inevitable in hindsight.',
   },
   {
     id: 4,
