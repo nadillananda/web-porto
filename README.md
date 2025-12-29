@@ -1,6 +1,6 @@
 # web-porto
 
-Nadilla's newest website portfolio. A minimalist, cinematic portfolio homepage built with Next.js, React, Tailwind CSS, and TypeScript.
+Nadilla's dummy website portfolio. A minimalist, cinematic portfolio homepage built with Next.js, React, Tailwind CSS, and TypeScript.
 
 ## Features
 
